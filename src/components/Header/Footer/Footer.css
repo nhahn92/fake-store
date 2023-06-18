@@ -5,6 +5,7 @@
 
     background-color: var(--dark-blue);
     color: var(--white);
+    font-size: 18px;
     height: 80px;
     padding: 0 15px;
 }
@@ -14,4 +15,5 @@
     border: none;
     color: var(--white);
     cursor: pointer;
+    font-size: inherit;
 }
