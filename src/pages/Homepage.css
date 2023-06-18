@@ -1,0 +1,24 @@
+.homepage-container {
+    font-family: 'Inter', sans-serif;
+}
+
+.category-filter-container {
+    display: flex;
+
+    color: var(--indigo);
+    column-gap: 35px;
+    font-size: 20px;
+    margin: 0 100px 25px 100px;
+}
+
+.category-filter-button {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 150px;
+    margin: 0 100px 50px 100px;
+}
