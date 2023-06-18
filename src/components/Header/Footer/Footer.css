@@ -1,0 +1,17 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--dark-blue);
+    color: var(--white);
+    height: 80px;
+    padding: 0 15px;
+}
+
+.contact-us-button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
