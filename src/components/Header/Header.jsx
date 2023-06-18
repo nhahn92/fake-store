@@ -7,7 +7,7 @@ function Header() {
     <div className="header-container">
         <h1>Fake Store</h1>
         <div className="shopping-cart-container">
-            <HiOutlineShoppingCart className="shopping-cart-icon" />
+            <HiOutlineShoppingCart />
             <div className="shopping-cart-number-container">
                 <p>1</p>
             </div>
