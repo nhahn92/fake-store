@@ -7,13 +7,5 @@
     color: var(--white);
     font-size: 18px;
     height: 80px;
-    padding: 0 15px;
-}
-
-.contact-us-button {
-    background-color: transparent;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    font-size: inherit;
+    padding: 0 25px;
 }
