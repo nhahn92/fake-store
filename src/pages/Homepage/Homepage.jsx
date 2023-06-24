@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Homepage.css'
 import axios from 'axios'
-import ProductCard from '../components/Header/ProductCard/ProductCard'
+import ProductCard from '../../components/ProductCard/ProductCard'
 
 // Goal: Show product cards and unique product categories when the page loads
 function Homepage() {
