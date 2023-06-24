@@ -1,0 +1,27 @@
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+}
+
+.product-container img {
+    height: 300px;
+}
+
+.details-container {
+    margin-left: 150px;
+    width: 350px;
+}
+
+.details-container button {
+    background-color: yellow;
+    border: none;
+    font-weight: 600;
+    padding: 5px 25px;
+}
+
+.bold-text {
+    font-weight: 600;
+}
