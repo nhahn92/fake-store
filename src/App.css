@@ -12,8 +12,10 @@ a {
 }
 
 :root {
+  --border-gray: #E7E7E7;
   --dark-blue: #3A4895;
   --indigo: #5264C3;
+  --light-gray: #FAFAFA;
   --red: red;
   --white: white;
 }
