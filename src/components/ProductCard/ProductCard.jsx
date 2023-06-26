@@ -6,8 +6,10 @@ function ProductCard({product}) {
   return (
     <div className="product-card">
         <BiHeartCircle className="heart-icon" />
-        <img src={product?.image} />
-        <div>
+        <div className="product-image-container">
+          <img src={product?.image} />
+        </div>
+        <div className="product-details-container">
             <p className="bold-product-text">{product?.title}</p>
             <p>{product?.category}</p>
         </div>
