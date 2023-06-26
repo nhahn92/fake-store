@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
 
+    background-color: var(--light-gray);
     color: var(--dark-blue);
     font-family: 'Inter', sans-serif;
     padding: 25px;
