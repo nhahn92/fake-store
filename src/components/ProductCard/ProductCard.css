@@ -11,6 +11,11 @@
     position: relative;
 }
 
+.product-card-dark {
+    background-color: var(--darker-blue);
+    color: var(--cyan);
+}
+
 .heart-icon {
     font-size: 40px;
     opacity: 0.2;

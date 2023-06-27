@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './Homepage.css'
 import axios from 'axios'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
 // Goal: Show product cards and unique product categories when the page loads
 function Homepage() {
+  // Dark Mode state
+  // Change to use global state
+  // Note: {} not []
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
+
   // Creates state to hold the products
   const [products, setProducts] = useState([])
 
@@ -62,7 +68,8 @@ function Homepage() {
   
   // Renders the page
   return (
-    <div className="homepage-container">
+    // If darkMode is true, adds "homepage-dark" class
+    <div className={darkMode?"hompage-container homepage-dark" : "homepage-container"}>
         <div className="category-filter-container">
           <p
             className="category-filter-button"

@@ -5,12 +5,19 @@
     
     background-color: var(--light-gray);
     font-family: 'Inter', sans-serif;
-    height: 100vh;
+    height: calc(100vh - 209px);
+}
+
+.product-container-dark {
+    background-color: var(--darker-blue);
+    color: var(--cyan);
 }
 
 .product-container img {
+    border: 2px solid var(--white);
     height: 400px;
     margin-top: -15%;
+    padding: 5px;
 }
 
 .details-container {
@@ -28,7 +35,7 @@
 }
 
 .details-container button {
-    background-color: yellow;
+    background-color: var(--yellow);
     border: none;
     
     font-weight: 600;

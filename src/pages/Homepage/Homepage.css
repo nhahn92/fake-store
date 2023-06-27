@@ -4,6 +4,10 @@
     min-height: 100vh;
 }
 
+.homepage-dark {
+    background-color: var(--darker-blue);
+}
+
 .category-filter-container {
     display: flex;
 
