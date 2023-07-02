@@ -69,7 +69,7 @@ function Homepage() {
   // Renders the page
   return (
     // If darkMode is true, adds "homepage-dark" class
-    <div className={darkMode?"hompage-container homepage-dark" : "homepage-container"}>
+    <div className={darkMode?"homepage-container homepage-dark" : "homepage-container"}>
         <div className="category-filter-container">
           <p
             className="category-filter-button"

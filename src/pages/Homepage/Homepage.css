@@ -15,6 +15,7 @@
     column-gap: 35px;
     font-size: 20px;
     margin: 0 100px 25px 100px;
+    padding-top: 25px;
 }
 
 .category-filter-button {
@@ -25,4 +26,5 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 100px;
+    padding-bottom: 50px;
 }
