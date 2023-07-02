@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom'
 
 // Modal from react-modal
 const customStyles = {
@@ -11,6 +12,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    fontFamily: 'Inter, sans-serif',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)'
@@ -34,10 +36,12 @@ function Footer() {
           style={customStyles}
           contentLabel="Contact Us Modal"
         >
+
         <div className="modal-header">
-          <h2>Contact Us</h2>
+          <Link to={"/contactus"}><button className="modal-button" onClick={() => setIsOpen(false)}>Go to Full-Page Form</button></Link>
           <button className="modal-close-button" onClick={() => setIsOpen(false)}>x</button>
         </div>
+        <h2>Contact Us</h2>
         <form>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" />
@@ -45,7 +49,8 @@ function Footer() {
           <input type="email" id="email" />
           <label htmlFor="message">Message:</label>
           <textarea id="message" rows="4"></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" className="modal-button">Send</button>
+          <button type="reset" className="modal-button">Reset</button>
         </form>
       </Modal>
     </div>
