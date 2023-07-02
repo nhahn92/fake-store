@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Header.css'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { ThemeContext } from '../../contexts/ThemeContext'
+import { Link } from 'react-router-dom'
 
 function Header() {
   // Change to use global state
@@ -11,7 +12,7 @@ function Header() {
   return (
     <div className={darkMode?"header-container header-dark" : "header-container"}>
       <div>
-        <h1>Fake Store</h1>
+        <Link to="/"><h1>Fake Store</h1></Link>
         <button className={darkMode?"theme-button theme-button-dark" : "theme-button"}
           onClick={() => setDarkMode(!darkMode)}>
             {
