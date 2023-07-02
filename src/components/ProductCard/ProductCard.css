@@ -1,9 +1,11 @@
 .product-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     background-color: var(--white);
     border-radius: 8px;
+    font-family: 'Inter', sans-serif;
     margin: 10px;
     padding: 25px;
     width: 250px;
@@ -12,8 +14,8 @@
 }
 
 .product-card-dark {
-    background-color: var(--darker-blue);
-    color: var(--cyan);
+    background-color: rgba(58, 72, 149, 0.1);
+    color: var(--light-gray);
 }
 
 .heart-icon {
@@ -29,10 +31,14 @@
     display: flex;
     align-items: center;
 
-    border: 2px var(--border-gray) solid;
+    border: 2px solid var(--border-gray);
     border-radius: 8px;
     height: 280px;
     margin-bottom: 35px;
+}
+
+.product-image-container-dark {
+    border: 2px solid rgba(58, 72, 149, 0.4);
 }
 
 .product-image-container img {
@@ -48,4 +54,20 @@
 
 .bold-product-text {
     font-weight: 600;
+}
+
+.see-details-button {
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.see-details-button:hover {
+    background-color: var(--red);
 }
