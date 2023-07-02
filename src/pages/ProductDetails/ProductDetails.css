@@ -10,19 +10,19 @@
 
 .product-container-dark {
     background-color: var(--darker-blue);
-    color: var(--cyan);
+    color: var(--light-gray);
 }
 
 .product-container img {
     border: 2px solid var(--white);
     height: 400px;
-    margin-top: -15%;
+    margin-top: -10%;
     padding: 5px;
 }
 
 .details-container {
     margin-left: 150px;
-    margin-top: -15%;
+    margin-top: -10%;
     width: 350px;
 }
 
@@ -39,5 +39,6 @@
     border: none;
     
     font-weight: 600;
+    font-size: 16px;
     padding: 10px 35px;
 }
