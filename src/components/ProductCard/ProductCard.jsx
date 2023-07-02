@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './ProductCard.css'
 import { BiHeartCircle } from "react-icons/bi"
 import { ThemeContext } from '../../contexts/ThemeContext'
+import { Link } from 'react-router-dom'
 
 function ProductCard({product}) {
   // Change to use global state
@@ -11,7 +12,7 @@ function ProductCard({product}) {
   return (
     <div className={darkMode?"product-card product-card-dark" : "product-card"}>
         <BiHeartCircle className="heart-icon" />
-        <div className="product-image-container">
+        <div className={darkMode?"product-image-container product-image-container-dark" : "product-image-container"}>
           <img src={product?.image} />
         </div>
         <div className="product-details-container">
@@ -21,6 +22,7 @@ function ProductCard({product}) {
         <div>
             <p className="bold-product-text">{product?.price} €</p>
         </div>
+        <Link to={`/details/${product.id}`}><button className="see-details-button">See Details</button></Link>
     </div>
   )
 }
