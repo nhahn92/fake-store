@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage/Homepage'
 import ContactUs from './pages/ContactUs/ContactUs'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
 import ThemeContextProvider from './contexts/ThemeContext'
+import Checkout from './pages/Checkout/Checkout'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/contactus' element={<ContactUs />} />
           <Route path='/details/:productId' element={<ProductDetails />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
 
         <Footer />
