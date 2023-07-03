@@ -16,13 +16,13 @@
 .product-container img {
     border: 2px solid var(--white);
     height: 400px;
-    margin-top: -10%;
+    
     padding: 5px;
 }
 
 .details-container {
     margin-left: 150px;
-    margin-top: -10%;
+    
     width: 350px;
 }
 
