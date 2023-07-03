@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './Header.css'
-import { HiOutlineShoppingCart } from 'react-icons/hi'
+import { FaShoppingCart } from 'react-icons/fa'
+import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { Link } from 'react-router-dom'
 
@@ -16,12 +17,12 @@ function Header() {
         <button className={darkMode?"theme-button theme-button-dark" : "theme-button"}
           onClick={() => setDarkMode(!darkMode)}>
             {
-              darkMode?"Light Mode" : "Dark Mode"
+              darkMode?<BsFillSunFill className="theme-icon" /> : <BsFillMoonFill className="theme-icon" />
             }
         </button>
       </div>
       <div className="shopping-cart-container">
-          <HiOutlineShoppingCart />
+          <Link to="/checkout"><FaShoppingCart /></Link>
           <div className="shopping-cart-number-container">
               <p>1</p>
           </div>
