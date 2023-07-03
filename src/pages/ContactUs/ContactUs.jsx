@@ -35,7 +35,7 @@ function ContactUs() {
   return (
     <div className={darkMode?"contact-us-container contact-us-dark" : "contact-us-container"}>
         <h1>Contact Us</h1>
-        <form className="contact-us-form">
+        <form className="contact-us-form" onSubmit={(e) => e.preventDefault()}>
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
           <textarea rows="6" placeholder="Write your message here"></textarea>
@@ -50,11 +50,11 @@ function ContactUs() {
           style={customStyles}
           contentLabel="Contact Us Modal"
         >
-        <div className="thank-you-modal-header">
-          <button className="modal-close-button" onClick={() => setIsOpen(false)}>x</button>
-        </div>
-        <p>Thank you for contacting us!</p>
-      </Modal>
+          <div className="thank-you-modal-header">
+            <button className="modal-close-button" onClick={() => setIsOpen(false)}>x</button>
+          </div>
+          <p>Thank you for contacting us!</p>
+        </Modal>
     </div>
   )
 }
