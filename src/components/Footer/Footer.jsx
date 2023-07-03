@@ -49,7 +49,7 @@ function Footer() {
           <input type="email" id="email" />
           <label htmlFor="message">Message:</label>
           <textarea id="message" rows="4"></textarea>
-          <button type="submit" className="modal-button">Send</button>
+          <button type="submit" className="modal-button">Submit</button>
           <button type="reset" className="modal-button">Reset</button>
         </form>
       </Modal>
