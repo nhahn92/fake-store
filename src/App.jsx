@@ -8,11 +8,13 @@ import ContactUs from './pages/ContactUs/ContactUs'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
 import ThemeContextProvider from './contexts/ThemeContext'
 import Checkout from './pages/Checkout/Checkout'
+import CartContextProvider from './contexts/CartContext'
 
 function App() {
   return (
     <BrowserRouter>
       <ThemeContextProvider>
+      <CartContextProvider>
         <Header />
 
         <Routes>
@@ -23,6 +25,7 @@ function App() {
         </Routes>
 
         <Footer />
+      </CartContextProvider>
       </ThemeContextProvider>
     </BrowserRouter>
   )
