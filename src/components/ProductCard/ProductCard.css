@@ -19,8 +19,18 @@
 }
 
 .heart-icon {
-    font-size: 40px;
-    opacity: 0.2;
+    color: var(--indigo);
+    font-size: 25px;
+    
+
+    position: absolute;
+    top: 35px;
+    right: 35px;
+}
+
+.heart-outline-icon {
+    color: var(--dark-blue);
+    font-size: 25px;
 
     position: absolute;
     top: 35px;
