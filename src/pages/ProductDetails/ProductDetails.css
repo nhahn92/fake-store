@@ -22,8 +22,18 @@
 
 .details-container {
     margin-left: 150px;
-    
     width: 350px;
+
+    position: relative;
+}
+
+.back-arrow-icon {
+    cursor: pointer;
+    font-size: 40px;
+
+    position: absolute;
+    top: -50px;
+    right: -55px;
 }
 
 .details-container h2 {
