@@ -1,0 +1,58 @@
+.checkout-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--light-gray);
+    font-family: 'Inter', sans-serif;
+    height: calc(100vh - 209px);
+    width: 100%;
+}
+
+.checkout-container-dark {
+    background-color: var(--darker-blue);
+    color: var(--light-gray);
+}
+
+.checkout-header-container {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template: 
+        "item item price quantity remove" 50px;
+    
+    background-color: var(--white);
+    border-bottom: 2px solid var(--border-gray);
+    color: var(--dark-gray);
+    margin-top: 150px;
+    width: 850px;
+}
+
+.checkout-contents-container {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template: 
+        "product product pricetag amount trashcan" 50px;
+
+    background-color: var(--white);
+    border-bottom: 2px solid var(--border-gray);
+    color: var(--black);
+    width: 850px;
+}
+
+.checkout-footer-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background-color: var(--white);
+    border-bottom: 2px solid var(--border-gray);
+    color: var(--black);
+    padding: 30px 50px 0 0;
+    width: 850px;
+}
+
+.checkout-item-header {
+    grid-area: item;
+}
