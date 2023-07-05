@@ -1,14 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Header.css'
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../contexts/CartContext'
 
 function Header() {
   // Change to use global state
   // Note: {} not []
   const {darkMode, setDarkMode} = useContext(ThemeContext)
+  
+  const {cart} = useContext(CartContext)
 
   return (
     <div className={darkMode?"header-container header-dark" : "header-container"}>
@@ -21,12 +24,12 @@ function Header() {
             }
         </button>
       </div>
-      <div className="shopping-cart-container">
-          <Link to="/checkout"><FaShoppingCart /></Link>
+      <Link to="/checkout"><div className="shopping-cart-container">
+          <FaShoppingCart />
           <div className="shopping-cart-number-container">
-              <p>1</p>
+              <p>{cart.length}</p>
           </div>
-      </div>
+      </div></Link>
     </div>
   )
 }
