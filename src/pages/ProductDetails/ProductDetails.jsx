@@ -4,15 +4,31 @@ import './ProductDetails.css'
 import axios from 'axios'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { BsArrowReturnLeft } from 'react-icons/bs'
+import { CartContext } from '../../contexts/CartContext'
 
 function ProductDetails() {
     // Change to use global state
     // Note: {} not []
-    const {darkMode, setDarkMode} = useContext(ThemeContext)
+    const {darkMode} = useContext(ThemeContext)
+
+    const {cart, addProduct, removeProduct} = useContext(CartContext)
 
     // This page shows the details for a specific product
     // The ID is in the URL, so the parameter must be retrieved
     const {productId} = useParams()
+
+    // Create variable to control "Add to Cart" button
+    // Change to state
+    const [isInCart, setIsInCart] = React.useState(false)
+
+    // Need to check if this product is in the cart
+    // any time cartContents changes
+    useEffect (
+        () => {
+            // Is this product in the cart?
+            setIsInCart(cart.find(item => item.id == product.id))
+        }
+    ), [cart] // Runs when cartContents changes
 
     // Create state to hold data from API
     const [product, setProduct] = useState('')
@@ -41,7 +57,12 @@ function ProductDetails() {
             <h2>{product?.price} €</h2>
             <h3>Description</h3>
             <p>{product?.description}</p>
-            <button>Add to Cart</button>
+            {
+                isInCart?
+                <button onClick={() => removeProduct(product?.id)}>Remove from Cart</button>
+                :
+                <button onClick={() => addProduct(product)}>Add to Cart</button>
+            }
         </div>
     </div>
   )

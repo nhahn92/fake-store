@@ -47,8 +47,13 @@
 .details-container button {
     background-color: var(--yellow);
     border: none;
-    
+    cursor: pointer;
     font-weight: 600;
     font-size: 16px;
-    padding: 10px 35px;
+    padding: 10px 25px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.details-container button:hover {
+    background-color: var(--red);
 }
