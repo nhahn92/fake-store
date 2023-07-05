@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import './ProductCard.css'
-import { BsHeartFill, BsHeart } from "react-icons/bs"
+import { BsHeartFill, BsHeart } from 'react-icons/bs'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../contexts/CartContext'
@@ -8,7 +8,7 @@ import { CartContext } from '../../contexts/CartContext'
 function ProductCard({product}) {
   // Change to use global state
   // Note: {} not []
-  const {darkMode, setDarkMode} = useContext(ThemeContext)
+  const {darkMode} = useContext(ThemeContext)
 
   const {cart, addProduct, removeProduct} = useContext(CartContext)
 
@@ -23,7 +23,7 @@ function ProductCard({product}) {
       // Is this product in the cart?
       setIsInCart(cart.find(item => item.id == product.id))
     }
-  ), [cart] // Runs when cartContents changes
+  ), [cart] // Runs when cart changes
 
   return (
     <div className={darkMode?"product-card product-card-dark" : "product-card"}>
