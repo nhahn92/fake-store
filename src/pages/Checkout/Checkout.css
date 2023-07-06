@@ -21,8 +21,9 @@
     border-bottom: 2px solid var(--border-gray);
     color: var(--dark-gray);
     font-size: 20px;
+    font-weight: 700;
     margin-top: 50px;
-    padding: 10px 40px 0 20px;
+    padding: 15px 35px;
     width: 70vw;
 }
 
@@ -31,9 +32,7 @@
     justify-content: space-between;
 
     background-color: var(--white);
-    color: var(--black);
-    height: 200px;
-    padding-right: 50px;
+    padding: 35px;
     width: 70vw;
 }
 
@@ -41,28 +40,30 @@
     display: flex;
     align-items: center;
 
-    margin: 20px 40px 0 0;  
-    padding-left: 50px;
     width: 60%;
 }
 
 .checkout-contents-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 40%;
 }
 
 .checkout-contents-left img {
-    width: 100px;
+    width: 130px;
 }
 
 .checkout-product-title {
     font-weight: 600;
     margin: 0 80px;
-    text-align: center;
     width: 100%;
+}
+
+.checkout-product-price, .checkout-product-quantity, .checkout-trashcan-icon {
+    text-align: center;
+    width: 100px;
 }
 
 .checkout-trashcan-icon {
@@ -83,12 +84,34 @@
     background-color: var(--white);
     border-bottom: 2px solid var(--border-gray);
     border-top: 2px solid var(--border-gray);
-    color: var(--black);
-    padding: 30px 50px 0 0;
-    width: 70%;
+    height: 200px;
+    margin-bottom: 50px;
+    width: 70vw;
+}
+
+.checkout-footer-contents-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100%;
+    padding-right: 50px;
+    width: 20%;
+}
+
+.checkout-footer-contents-container div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-footer-container p {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .checkout-button {
+    align-self: flex-end;
+
     background-color: var(--yellow);
     border: none;
     cursor: pointer;
@@ -96,8 +119,20 @@
     font-size: 16px;
     padding: 10px 25px;
     transition: background-color 0.3s ease-in-out;
+    width: fit-content;
 }
 
 .checkout-button:hover {
     background-color: var(--red);
+}
+
+.checkout-dark {
+    background-color: rgba(58, 72, 149, 0.1);
+    border-color: var(--indigo);
+    color: var(--light-gray);
+}
+
+.checkout-dark img {
+    border: 2px solid rgba(58, 72, 149, 0.4);
+    padding: 5px;
 }
