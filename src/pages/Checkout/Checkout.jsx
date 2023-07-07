@@ -16,8 +16,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     fontFamily: 'Inter, sans-serif',
-    height: '350px',
-    width: '550px'
+    height: '350px'
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)'
