@@ -69,3 +69,13 @@ form input, form textarea {
 form input:focus, form textarea:focus {
     outline: none;
 }
+
+@media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        font-size: 15px;
+        gap: 10px;
+    }
+}

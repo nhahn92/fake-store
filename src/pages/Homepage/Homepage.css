@@ -28,3 +28,35 @@
     margin: 0 100px;
     padding-bottom: 50px;
 }
+
+@media (max-width: 1279px) {
+    .products-container {
+        justify-content: center;
+
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 1009px) {
+    .category-filter-container {
+        margin: 0 50px 25px 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    .category-filter-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-filter-container {
+        gap: 25px;
+    }
+
+    .products-container {
+        margin: 0;
+
+    }
+}

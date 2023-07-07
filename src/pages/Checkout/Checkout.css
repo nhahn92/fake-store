@@ -98,3 +98,26 @@
     padding: 0 55px;
     text-align: center;
 }
+
+@media (max-width: 1120px) {
+    .checkout-header-container {
+        font-size: 16px;
+        font-weight: 600;
+        width: 90vw;
+    }
+
+    .checkout-footer-container {
+        height: 150px;
+        width: 90vw;
+    }
+
+    .checkout-footer-container p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 630px) {
+    .checkout-header-container {
+        display: none;
+    }
+}

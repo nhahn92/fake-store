@@ -80,3 +80,44 @@
 .see-details-button:hover {
     background-color: var(--red);
 }
+
+@media (max-width: 1009px) {
+    .product-card {
+        margin: 5px;
+        width: 225px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        font-size: 14px;
+        padding: 10px;
+        width: 150px;
+    }
+
+    .heart-icon {
+        top: 20px;
+        right: 20px;
+    }
+
+    .heart-outline-icon {
+        top: 20px;
+        right: 20px;
+    }
+
+    .product-image-container {
+        margin-bottom: 5px;
+    }
+
+    .product-image-container img {
+        max-height: 160px;
+        object-fit: contain;
+        padding: 5px;
+    }
+
+    .see-details-button {
+        font-size: 14px;
+        padding: 5px 0;
+        width: 100%;
+    }
+}
