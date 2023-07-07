@@ -57,12 +57,14 @@ function ProductDetails() {
             <h2>{product?.price} €</h2>
             <h3>Description</h3>
             <p>{product?.description}</p>
-            {
-                isInCart?
-                <button onClick={() => removeProduct(product?.id)}>Remove from Cart</button>
-                :
-                <button onClick={() => addProduct(product)}>Add to Cart</button>
-            }
+            <div className="add-to-cart-button-container">
+                {
+                    isInCart?
+                    <button onClick={() => removeProduct(product?.id)}>Remove from Cart</button>
+                    :
+                    <button onClick={() => addProduct(product)}>Add to Cart</button>
+                }
+            </div>
         </div>
     </div>
   )
