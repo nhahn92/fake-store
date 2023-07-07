@@ -1,17 +1,41 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import './Checkout.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { CartContext } from '../../contexts/CartContext'
-import { FaTrashAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Modal from 'react-modal'
+import CheckoutCard from '../../components/CheckoutCard/CheckoutCard'
+
+// Modal from react-modal
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    fontFamily: 'Inter, sans-serif',
+    height: '350px',
+    width: '550px'
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+  }
+};
+
+// Make sure to bind Modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement(document.getElementById('root'));
 
 function Checkout() {
   // Change to use global state
   // Note: {} not []
   const {darkMode} = useContext(ThemeContext)
 
-  const {cart, removeProduct} = useContext(CartContext)
-  console.log(cart)
+  const {cart} = useContext(CartContext)
+
+  // Create state to control Modal
+  const [isOpen, setIsOpen] = React.useState(false)
 
   // Find the total price of cart contents
   let total = 0;
@@ -30,23 +54,12 @@ function Checkout() {
         </div>
       </div>
       {
-        cart.map(function(item) {
-          return (
-            <>
-              <div className={darkMode?"checkout-contents-container checkout-dark" : "checkout-contents-container"}>
-                <div className="checkout-contents-left">
-                  <img src={item?.image} />
-                  <Link to={`/details/${item.id}`}><p className="checkout-product-title">{item?.title}</p></Link>
-                </div>
-                <div className="checkout-contents-right">
-                  <p className="checkout-product-price">{item?.price} €</p>
-                  <p className="checkout-product-quantity">1</p>
-                  <FaTrashAlt className="checkout-trashcan-icon" onClick={() => removeProduct(item?.id)} />
-                </div>
-              </div>
-            </>
-          )
-        })
+        cart.length > 0?
+        cart.map(item => <CheckoutCard
+            key={item.id}
+            product={item} />)
+        :
+        <p className="empty-cart-message">There are no items in your cart yet.</p>
       }
       <div className={darkMode?"checkout-footer-container checkout-dark" : "checkout-footer-container"}>
         <div className="checkout-footer-contents-container">
@@ -54,7 +67,19 @@ function Checkout() {
             <p>Total</p>
             <p>{total.toFixed(2)} €</p>
           </div>
-          <button className="checkout-button">Checkout</button>
+          <button className="checkout-button" onClick={() => setIsOpen(true)}>Checkout</button>
+          <Modal
+            isOpen={isOpen}
+            onRequestClose={() => setIsOpen(false)}
+            style={customStyles}
+            contentLabel="Contact Us Modal"
+          >
+            <div className="checkout-modal-container">
+              <p>Your Order was successful!</p>
+              <p>Check your email for the order confirmation. Thank you for shopping with Fake Store!</p>
+              <Link to="/"><button className="modal-button">Return to Main Page</button></Link>
+            </div>
+          </Modal>
         </div>
       </div>
     </div>
