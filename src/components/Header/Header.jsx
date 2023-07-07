@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import './Header.css'
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'

@@ -27,7 +27,7 @@ function ContactUs() {
   // Dark Mode state
   // Change to use global state
   // Note: {} not []
-  const {darkMode, setDarkMode} = useContext(ThemeContext)
+  const {darkMode} = useContext(ThemeContext)
 
   // Create state to control Modal
   const [isOpen, setIsOpen] = React.useState(false)

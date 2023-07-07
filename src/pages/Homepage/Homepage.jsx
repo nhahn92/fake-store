@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import './Homepage.css'
 import axios from 'axios'
 import ProductCard from '../../components/ProductCard/ProductCard'
@@ -9,7 +9,7 @@ function Homepage() {
   // Dark Mode state
   // Change to use global state
   // Note: {} not []
-  const {darkMode, setDarkMode} = useContext(ThemeContext)
+  const {darkMode} = useContext(ThemeContext)
 
   // Creates state to hold the products
   const [products, setProducts] = useState([])
