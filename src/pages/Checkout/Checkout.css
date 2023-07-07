@@ -9,7 +9,7 @@
 }
 
 .checkout-container-dark {
-    background-color: var(--darker-blue);
+    background-color: var(--dark-blue);
     color: var(--light-gray);
 }
 
@@ -119,5 +119,15 @@
 @media (max-width: 630px) {
     .checkout-header-container {
         display: none;
+    }
+
+    .checkout-footer-container {
+        border-top: none;
+        margin-top: 25px;
+    }
+
+    .checkout-button {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }

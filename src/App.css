@@ -13,13 +13,13 @@ a {
 
 :root {
   --border-gray: #E7E7E7;
-  --dark-blue: #3A4895;
-  --darker-blue: #1C1F29;
-  --dark-gray: #595959;
   --cyan: #28C9C7;
+  --dark-blue: #1C1F29;
+  --dark-gray: #595959;
   --indigo: #5264C3;
   --light-gray: #FAFAFA;
-  --red: red;
-  --white: white;
-  --yellow: yellow;
+  --medium-blue: #3A4895;
+  --red: #FF0000;
+  --white: #FFFFFF;
+  --yellow: #FFFF00;
 }

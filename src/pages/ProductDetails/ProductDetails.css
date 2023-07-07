@@ -9,7 +9,7 @@
 }
 
 .product-container-dark {
-    background-color: var(--darker-blue);
+    background-color: var(--dark-blue);
     color: var(--light-gray);
 }
 
@@ -124,6 +124,11 @@
 
     .details-container {
         width: fit-content;
+    }
+
+    .details-container button {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
 
